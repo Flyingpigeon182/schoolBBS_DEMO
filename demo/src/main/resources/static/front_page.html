@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en">
+<head th:fragment="static">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <var hidden="hidden">treestring</var>
+    <var hidden="hidden">id</var>
+
+    <label for="instring" style="position:absolute;left:10px;top:10px">字符串输入框</label>
+
+    <input type="text" id="instring" value="" style="position:absolute;left:120px;top:10px"/><br>
+
+    <button onclick="add_string()" style="position:absolute;left:300px;top:10px">添加字符串</button>
+
+    <label for="ID" style="position:absolute;left:10px;top:60px">ID输入框</label>
+
+    <input type="number" id="ID" name="ID" min="0" max="1024" style="position:absolute;left:120px;top:60px"/>
+
+    <button onclick="get_map()" style="position:absolute;left:200px;top:60px">根据ID载入字符串并显示</button>
+
+    <button onclick="delete_string()" style="position:absolute;left:380px;top:60px">根据ID删除字符串</button>
+
+    <button onclick="get_all()" style="position:absolute;left:10px;top:110px">显示所有字符串列表</button>
+
+    <label for="output" style="position:absolute;left:600px;top:110px">信息输出栏</label>
+
+    <textarea id="output" name="output" rows="5" cols="33" readonly="readonly"
+                                                    style="position:absolute;left:700px;top:60px">
+    这里会显示与后端交互的一些信息。
+    </textarea>
+
+    <canvas id="myCanvas" width="2000" height="2000"
+            style="border:1px solid rgba(0,0,0,0.97); position:absolute;left:10px;top:160px">
+    </canvas>
+    </body>
+<script src="JQuery.js"></script>
+<script type = "text/javascript" src="Operator.js"></script>
+<script type = "text/javascript" src="Show_Tree.js"></script>
+</html>

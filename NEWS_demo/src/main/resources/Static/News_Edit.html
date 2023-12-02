@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      lang="en">
+<head th:fragment="static">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body background="IMAGE.jpg"
+style="background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%; ">
+<var hidden="hidden">inputtitle</var>
+<var hidden="hidden">inputtest</var>
+<var hidden="hidden">id</var>
+<var hidden="hidden">news_now</var>
+<var hidden="hidden">newslist</var>
+
+<label for="inid" style="position:absolute;left:10px;top:280px">新闻ID编辑框</label>
+<input type="number" id="inid" name="ID" style="position:absolute;left:140px;top:280px"/><br>
+
+<label for="instring" style="position:absolute;left:10px;top:340px">新闻标题编辑框</label>
+<textarea id="instring" name="title" rows="2" cols="100" style="position:absolute;left:140px;top:340px"></textarea>
+
+<label for="intest" style="position:absolute;left:10px;top:400px">新闻内容编辑框</label>
+<textarea id="intest" name="test"  rows="10" cols="100" style="position:absolute;left:140px;top:400px"></textarea>
+
+<label for="newslist" style="position:absolute;left:10px;top:220px">选择新闻id</label>
+<select id="newslist" style="position:absolute;left:140px;top:220px" onchange="show_selected()"></select>
+
+<label for="alltest" style="position:absolute;left:10px;top:10px">获取的所有新闻信息</label>
+<textarea id="alltest" name="alltest"  rows="10" cols="100" readonly="readonly" style="position:absolute;left:10px;top:50px"></textarea>
+
+<button onclick="add_news()" style="position:absolute;left:10px;top:600px">添加新闻</button>
+
+<button onclick="chenge_news()" style="position:absolute;left:100px;top:600px">更改新闻</button>
+
+<button onclick="delete_news()" style="position:absolute;left:310px;top:600px">删除新闻</button>
+
+<button onclick="get_all_news()" style="position:absolute;left:190px;top:600px">显示所有新闻</button>
+
+<label for="output" style="position:absolute;left:500px;top:220px">信息输出栏</label>
+<textarea id="output" name="output" rows="5" cols="33" readonly="readonly"
+          style="position:absolute;left:600px;top:220px">
+这里会显示与后端交互的一些信息。
+    </textarea>
+
+</body>
+<script src="JQuery.js"></script>
+<script type = "text/javascript" src="Operation.js"></script>
+<script type = "text/javascript" src="Shownews.js"></script>
+</html>
